@@ -1,4 +1,4 @@
-# DCF Valuation Model — Infosys Limited (NSE: INFY)
+# DCF Valuation Model - Infosys Limited (NSE: INFY)
 
 A Python implementation of a five-year Discounted Cash Flow (DCF) valuation model for Infosys Limited. The tool fetches audited financial data via the `yfinance` API, projects Free Cash Flow to Firm (FCFF) across a five-year forecast horizon, computes the Weighted Average Cost of Capital (WACC) using the Capital Asset Pricing Model (CAPM), and derives an implied intrinsic value per share. Output includes a full valuation bridge and a two-dimensional sensitivity analysis across WACC and terminal growth rate assumptions.
 
