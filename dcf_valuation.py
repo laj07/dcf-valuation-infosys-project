@@ -41,7 +41,7 @@ except ImportError:
 
 
 # ==============================================================================
-# SECTION 1 — CONFIGURATION
+# SECTION 1: CONFIGURATION
 # Analysts always make their assumptions explicit and easy to change.
 # ==============================================================================
 
@@ -85,7 +85,7 @@ CONFIG = {
 
 
 # ==============================================================================
-# SECTION 2 — DATA FETCHING
+# SECTION 2: DATA FETCHING
 # We try yfinance first; fall back to FY2024 actuals if network is blocked.
 # ==============================================================================
 
@@ -206,7 +206,7 @@ def load_data() -> dict:
 
 
 # ==============================================================================
-# SECTION 3 — WACC CALCULATION
+# SECTION 3: WACC CALCULATION
 #
 # WACC = Weighted Average Cost of Capital
 # It is the "hurdle rate" — the minimum return Infosys must earn to create
@@ -269,7 +269,7 @@ def calculate_wacc(data: dict) -> dict:
 
 
 # ==============================================================================
-# SECTION 4 — HISTORICAL ANALYSIS
+# SECTION 4: HISTORICAL ANALYSIS
 # Derive growth rates and margins from the historical data.
 # ==============================================================================
 
@@ -316,7 +316,7 @@ def analyse_historical(data: dict) -> dict:
 
 
 # ==============================================================================
-# SECTION 5 — 5-YEAR FREE CASH FLOW PROJECTION
+# SECTION 5: 5-YEAR FREE CASH FLOW PROJECTION
 #
 # Free Cash Flow (FCF) = the actual cash a business generates for investors,
 # after paying for operations and capital expenditures.
@@ -386,7 +386,7 @@ def project_fcf(historical: dict) -> list:
 
 
 # ==============================================================================
-# SECTION 6 — TERMINAL VALUE & INTRINSIC PRICE
+# SECTION 6: TERMINAL VALUE & INTRINSIC PRICE
 #
 # Terminal Value captures all cash flows BEYOND Year 5 (in perpetuity).
 # We use the Gordon Growth Model:
@@ -472,7 +472,7 @@ def calculate_intrinsic_value(projections: list, wacc_result: dict, data: dict) 
 
 
 # ==============================================================================
-# SECTION 7 — SENSITIVITY ANALYSIS
+# SECTION 7: SENSITIVITY ANALYSIS
 # Real analysts always test how the output changes with key assumptions.
 # This is a 2-variable sensitivity table: WACC × Terminal Growth Rate.
 # ==============================================================================
@@ -518,7 +518,7 @@ def sensitivity_analysis(projections: list, data: dict, base_wacc: float) -> dic
 
 
 # ==============================================================================
-# SECTION 8 — OUTPUT / DISPLAY
+# SECTION 8: OUTPUT / DISPLAY
 # Formatted console output for a clean portfolio presentation.
 # ==============================================================================
 
@@ -697,7 +697,7 @@ def print_sensitivity(sens: dict, data: dict):
 
 
 # ==============================================================================
-# SECTION 9 — MAIN EXECUTION
+# SECTION 9: MAIN EXECUTION
 # ==============================================================================
 
 def main():
