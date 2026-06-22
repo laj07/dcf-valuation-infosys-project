@@ -646,11 +646,11 @@ def print_final_verdict(results: dict):
     print()
 
     if up > 0.15:
-        verdict = "🟢  UNDERVALUED  — Market price appears below intrinsic value."
+        verdict = "🟢  UNDERVALUED:    Market price appears below intrinsic value."
     elif up < -0.15:
-        verdict = "🔴  OVERVALUED   — Market price appears above intrinsic value."
+        verdict = "🔴  OVERVALUED:     Market price appears above intrinsic value."
     else:
-        verdict = "🟡  FAIRLY VALUED — Price is within ±15% of intrinsic value."
+        verdict = "🟡  FAIRLY VALUED:  Price is within ±15% of intrinsic value."
 
     print(f"  Verdict: {verdict}")
     print()
@@ -667,7 +667,7 @@ def print_final_verdict(results: dict):
 
 def print_sensitivity(sens: dict, data: dict):
     print("━" * 72)
-    print("  SECTION E: SENSITIVITY ANALYSIS — Intrinsic Price (₹)")
+    print("  SECTION E: SENSITIVITY ANALYSIS (Intrinsic Price (₹))")
     print("  Rows = WACC  |  Columns = Terminal Growth Rate")
     print("━" * 72)
 
