@@ -192,9 +192,9 @@ def load_data() -> dict:
     """
     if YFINANCE_AVAILABLE:
         try:
-            print("⏳  Fetching live data from Yahoo Finance...")
+            print("Fetching live data from Yahoo Finance...")
             data = fetch_live_data(CONFIG["ticker"])
-            print(f"✅  Live data loaded ({data['source']})\n")
+            print(f"Live data loaded ({data['source']})\n")
             return data
         except Exception as e:
             print(f"⚠️   yfinance error: {e}")
@@ -535,10 +535,10 @@ def _fmt(val, unit="", decimals=1):
 
 def print_banner():
     banner = f"""
-╔══════════════════════════════════════════════════════════════════════════╗
-║          DCF VALUATION MODEL — {CONFIG['company_name']:<38}║
-║          Ticker: {CONFIG['ticker']:<10}  |  Date: {datetime.today().strftime('%d %b %Y'):<28}║
-╚══════════════════════════════════════════════════════════════════════════╝
+
+        DCF VALUATION MODEL: {CONFIG['company_name']:<38}               
+        Ticker: {CONFIG['ticker']:<10}  |  Date: {datetime.today().strftime('%d %b %Y'):<28}
+
 """
     print(banner)
 
